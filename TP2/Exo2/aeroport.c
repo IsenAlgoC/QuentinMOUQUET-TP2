@@ -13,9 +13,9 @@ main() {
 	while (Demande == 1) {
 		printf("Entrez la premiere dimensions ");
 		scanf_s("%f", &longueur);
-		rintf("\nEntrez la deuxieme dimensions ");
+		printf("\nEntrez la deuxieme dimensions ");
 		scanf_s("%f", &largeur);
-		rintf("\nEntrez la troisieme dimensions ");
+		printf("\nEntrez la troisieme dimensions ");
 		scanf_s("%f", &hauteur);
 		if (largeur > longueur) {
 			tmp = longueur;
@@ -41,7 +41,7 @@ main() {
 		letter = "G";
 		while (letter != "N" || letter != "Y") {
 			printf("\nVoulez vous continuez? Y/N");
-			scanf_s("%s", &letter);
+			scanf_s("%d", &letter);
 			printf("\nVous avez entrez %c", letter);
 			if (letter == "N") {
 				Demande = 0;
@@ -51,4 +51,5 @@ main() {
 			}
 		}
 	}
+	return EXIT_SUCCESS;
 }

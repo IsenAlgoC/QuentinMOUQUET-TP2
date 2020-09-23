@@ -67,5 +67,5 @@ main() {
 	}
 	printf("La somme des premiers entiers jusqu'a n=%d est de %d.\n", n, somme);
 
-
+	return EXIT_SUCCESS;
 }

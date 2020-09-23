@@ -23,4 +23,5 @@ main() {
 	else {
 		printf("\n%d n'est pas bisextile", annee);
 	}
+	return EXIT_SUCCESS;
 }
