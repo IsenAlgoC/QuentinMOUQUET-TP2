@@ -9,7 +9,7 @@ main() {
 	float largeur = 0;
 	float hauteur = 0;
 	float tmp = 0;
-	char letter = "N";
+	char letter = "G";
 	while (Demande == 1) {
 		printf("Entrez la premiere dimensions ");
 		scanf_s("%f", &longueur);
@@ -38,8 +38,17 @@ main() {
 		else {
 			printf("\nLe colis n'est pas valide");
 		}
-		printf("\nVoulez vous continuez? Y/N");
-		scanf_s("%c", &letter);
-		if (letter == "N")
+		letter = "G";
+		while (letter != "N" || letter != "Y") {
+			printf("\nVoulez vous continuez? Y/N");
+			scanf_s("%s", &letter);
+			printf("\nVous avez entrez %c", letter);
+			if (letter == "N") {
+				Demande = 0;
+			}
+			else {
+				printf("\nVeuillez entrez Y ou N");
+			}
+		}
 	}
 }
