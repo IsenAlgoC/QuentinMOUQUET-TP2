@@ -2,11 +2,21 @@
 #include <stdio.h>
 
 main() {
-	int n = 100;
-	int curseur = 1;
-	int somme = 0;
+	unsigned short int n = 100;
+	unsigned short int curseur = 1;
+	unsigned short int somme = 0;
 	for (curseur = 1; curseur <= n; curseur++) {
 		somme = somme + curseur;
 	}
-	printf("La somme des premiers entiers jusqu'a %d est de %d", n, somme);
+	printf("La somme des premiers entiers jusqu'a n=%d est de %d.\n", n, somme);
+	somme = 0;
+	curseur = 1;
+	while (65535 - somme >= curseur) {
+		somme = somme + curseur;
+		curseur = curseur + 1;
+	}
+	printf("n peut prendre %d en valeur maximale pour eviter un depassement de memoire.\nOn atteind alors la somme de %d.\n\n", curseur - 1,somme);
+
+	scanf_s("Entrez une valeur de n %hu", &n);
+
 }
