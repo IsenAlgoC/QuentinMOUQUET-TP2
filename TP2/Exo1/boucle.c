@@ -16,7 +16,11 @@ main() {
 		curseur = curseur + 1;
 	}
 	printf("n peut prendre %d en valeur maximale pour eviter un depassement de memoire.\nOn atteind alors la somme de %d.\n\n", curseur - 1,somme);
-
-	scanf_s("Entrez une valeur de n %hu", &n);
-
+	somme = 0;
+	printf("Entrez une valeur de n ");
+	scanf_s("%hu", &n);
+	for (curseur = 1; curseur <= n; curseur++) {
+		somme = somme + curseur;
+	}
+	printf("La somme des premiers entiers jusqu'a n=%d est de %d.\n", n, somme);
 }
