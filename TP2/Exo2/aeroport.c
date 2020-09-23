@@ -41,7 +41,7 @@ main() {
 		letter = "G";
 		while (letter != "N" || letter != "Y") {
 			printf("\nVoulez vous continuez? Y/N");
-			scanf_s("%d", &letter);
+			scanf_s("%c", &letter);
 			printf("\nVous avez entrez %c", letter);
 			if (letter == "N") {
 				Demande = 0;
